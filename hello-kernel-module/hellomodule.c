@@ -10,7 +10,7 @@ MODULE_DESCRIPTION("HELLO WORLD KERNEL MODULE");
  *  @brief This function is called when the module is loaded into the kernel
  */
 static int __init ModuleInit(void) {
-	printk("Hello kernel");
+	printk("Hello kernel\n");
 	return 0;//zero as a return means succes, negative for error
 }
 
@@ -18,7 +18,7 @@ static int __init ModuleInit(void) {
  * @brief This function is called when the module is removed from the kernel
  */
 static void __exit ModuleExit(void) {
-	printk("Bye kerenl");
+	printk("Bye kerenl\n");
 }
 
 module_init(ModuleInit);
